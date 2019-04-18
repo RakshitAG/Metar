@@ -21,6 +21,7 @@ class MetarController extends Controller
     } else {
       return view('error');
     }
+    
     $url="https://tgftp.nws.noaa.gov/data/observations/metar/stations/".$station.".TXT";
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
